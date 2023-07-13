@@ -8,7 +8,7 @@ import util
 import torch.nn as nn
 import torchvision.transforms as transform
 from basicsr.metrics import calculate_niqe
-import Affine.Experiments.experiment1.utils_image as util_
+import Experiments.experiment1.utils_image as util_
 from NetG import TD_IDES
 from ChannelSplit_arch4_2 import TDSR
 
@@ -35,7 +35,7 @@ net = TDSR().to(device)
 optimizer = optim.Adam(net.parameters(), lr=0.0001)
 
 netG = TD_IDES().to(device)
-pre_file = torch.load('netG_3_params_NetG2_refine_2.pth')
+pre_file = torch.load('TD_IDES.pth')
 netG.load_state_dict(pre_file)
 
 rec_loss = nn.L1Loss()
