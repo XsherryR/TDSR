@@ -3,9 +3,9 @@ import os.path
 import torch
 from PIL import Image
 import torchvision.transforms as transform
-import Affine.Experiments.experiment1.utils_image as util_
-from Affine.archs.NetG import TD_IDES
-from Affine.archs.ChannelSplit_arch4_2 import TDSR
+import Experiments.experiment1.utils_image as util_
+from archs.NetG import TD_IDES
+from archs.ChannelSplit_arch4_2 import TDSR
 
 totensor = transform.ToTensor()
 
