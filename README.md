@@ -1,4 +1,4 @@
 # TDSR
 Three-Dimensional Implicit Degradation Estimation for Real-World Super-Resolution Under Spatially-Variant Degradation. (TDSR)
 
-The rest code will be relased soon.
+The rest code in our paper will be relased soon.
