@@ -5,7 +5,7 @@ from PIL import Image
 import torchvision.transforms as transform
 import Affine.Experiments.experiment1.utils_image as util_
 from Affine.archs.NetG import TD_IDES
-from Affine.archs.ChannelSplit_arch4_2 import CSnet
+from Affine.archs.ChannelSplit_arch4_2 import TDSR
 
 totensor = transform.ToTensor()
 
@@ -13,7 +13,7 @@ ori_path = '../../../Dataset/Experiments/experiment1/BSD100/SVLR'       # LR ima
 E_path = '../../../Dataset/Experiments/experiment1/BSD100/results'      # SR results
 
 checkpoint = torch.load('../../pretrain_weight/TDSR.pth.tar')
-net_sr = CSnet().cuda()
+net_sr = TDSR().cuda()
 device_ids = [0, 1]
 net_sr = torch.nn.DataParallel(net_sr, device_ids=device_ids)
 net_sr.load_state_dict(checkpoint['state_dict'])
