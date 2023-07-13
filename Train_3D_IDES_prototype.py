@@ -4,11 +4,11 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from DatasetFromFolder import DatasetFromFolder_train, DatasetFromFolder_test
-from New_idea.DW_degnet import TD_IDET
-from Affine.archs.NetG import TD_IDES
+from DW_degnet import TD_IDET
+from archs.NetG import TD_IDES
 import torch.nn.functional as F
 from torch.optim import lr_scheduler
-from Affine.archs.common import transfer_model
+from archs.common import transfer_model
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
