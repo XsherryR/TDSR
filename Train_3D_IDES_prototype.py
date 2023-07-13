@@ -103,7 +103,7 @@ for epoch in range(NB_EPOCHS):
 
             l_code = rec_loss(degfea_out_, lr_img-F.interpolate(hr_img, scale_factor=1/4, mode='bilinear'))
             l += l_code.item()
-        l = l / 50
+        l = l / 100
         print(l)
     exp_lr_scheduler.step()
 
