@@ -32,7 +32,7 @@ net_deg = TD_IDET().to(device)
 pre_file = torch.load('../pretrain_weight/3D_IDET.pth')
 net_deg.load_state_dict(pre_file)
 
-#----------------Ours-------------------
+
 netG = TD_IDES().to(device)
 netG = transfer_model('../pretrain_weight/3D_IDET.pth', netG)
 optimizerG = optim.Adam(netG.parameters(), lr=0.0002)
