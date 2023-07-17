@@ -26,7 +26,7 @@ test_hr = '../Dataset/test/DIV2K/HR/'
 test_lr = '../Dataset/test/DIV2K/LR/'
 
 trainset = DatasetFromFolder_train(train_hr)
-testset = DatasetFromFolder_test(test_hr, test_lr, zoom_factor)
+testset = DatasetFromFolder_test(test_hr, test_lr)
 
 trainloader = DataLoader(dataset=trainset, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS)
 testloader = DataLoader(dataset=testset, batch_size=BATCH_SIZE_, shuffle=False, num_workers=NUM_WORKERS)
